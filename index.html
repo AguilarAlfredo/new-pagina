@@ -1,118 +1,147 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mi Portafolio</title>
+  <title>Mi Portafolio Personal</title>
   <style>
-    /* Estilos CSS para el portafolio */
+    /* Reset de estilos para el body */
     body {
+    margin: 0;
+    padding: 0;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Estilos generales para los encabezados */
+    h1, h2 {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+      margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      font-weight: bold;
     }
-    
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    nav ul li {
-      display: inline;
-    }
-    
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      margin-right: 15px;
-    }
-    
-    section {
+
+    /* Estilos para la sección de inicio */
+    #inicio {
+    padding: 50px;
+    background-color: #FFD1DC;
       padding: 50px;
+      background-color: #FFD1DC;
     }
-    
-    section h2 {
-      color: #333;
-      font-size: 24px;
-      margin-bottom: 20px;
+
+    #inicio img {
+    width: 150px; /* Cambiar el ancho de la imagen según tu preferencia */
+    height: 150px; /* Cambiar la altura de la imagen según tu preferencia */
+    border-radius: 50%; /* Opcional: agregar bordes redondeados a la imagen */
+      width: 150px; /* Cambiar el ancho de la imagen según tu preferencia */
+      height: 150px; /* Cambiar la altura de la imagen según tu preferencia */
+      border-radius: 50%; /* Opcional: agregar bordes redondeados a la imagen */
     }
-    
-    section p {
-      color: #666;
+
+
+    /* Estilos para la sección de habilidades */
+    #habilidades {
+    padding: 50px;
+    background-color: #BCE5F5;
+      padding: 50px;
+      background-color: #BCE5F5;
+    }
+
+    /* Estilos para la lista de habilidades */
+    #habilidades ul {
+    list-style-type: none;
+      list-style-type: none;
+    }
+
+    /* Estilos para la sección de proyectos */
+    #proyectos {
+    padding: 50px;
+    background-color: #FFFFC2;
+      padding: 50px;
+      background-color: #FFFFC2;
+    }
+
+    /* Estilos para la lista de proyectos */
+    #proyectos ul {
+    list-style-type: none;
+      list-style-type: none;
+    }
+
+    /* Estilos para la sección de contacto */
+    #contacto {
+    padding: 50px;
+    background-color: #DCE0EA;
+      padding: 50px;
+      background-color: #DCE0EA;
+    }
+
+    /* Estilos para la lista de contacto */
+    #contacto ul {
+    list-style-type: none;
+      list-style-type: none;
+    }
+
+    /* Estilos generales para los párrafos y listas */
+    p, ul {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+      font-family: Arial, sans-serif;
       font-size: 16px;
-      line-height: 1.5;
-    }
-    
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    
-    footer p {
-      margin: 0;
-    }
-    
-    /* Reglas de CSS para la imagen de cabecera */
-    header img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
+      color: #333;
     }
   </style>
-</head>
-<body>
-  <header>
-    <img src="data:image/png;base64,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" alt="Imagen de cabecera">
-    <h1>Mi Portafolio</h1>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobremi">Sobre mí</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-
+  <link rel="stylesheet" href="estilos.css">
+@@ -77,8 +77,15 @@
+  <!-- Sección de inicio -->
   <section id="inicio">
-    <h2>Bienvenido a mi Portafolio</h2>
-    <p>Texto introductorio sobre ti y tu portafolio.</p>
+    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="Imagen de cabecera">
+    <h1>Nombre Apellido</h1>
+    <p>Breve descripción sobre ti y tus intereses profesionales.</p>
+    <h1>Estefany Aguilar</h1>
+    <p>Programadora web apasionada con experiencia en startups colombianas. Habilidades en HTML, CSS, JavaScript. Enfoque en interfaces de usuario atractivas y eficientes.</p>
+    <ul>
+        <!-- Enlaces a redes sociales -->
+        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+        <li><a href="https://twitter.com/">Twitter</a></li>
+        <li><a href="https://github.com/">GitHub</a></li>
+        <!-- Agrega más enlaces a tus redes sociales aquí -->
+    </ul>
   </section>
 
-  <section id="sobremi">
-    <h2>Sobre mí</h2>
-    <p>Información personal y descripción de tus habilidades y experiencia.</p>
+  <!-- Sección de habilidades -->
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Otras habilidades relevantes</li>
+    </ul>
   </section>
-
+  <!-- Sección de proyectos -->
   <section id="proyectos">
     <h2>Proyectos</h2>
-    <div>
-      <h3>Proyecto 1</h3>
-      <p>Descripción del proyecto 1.</p>
-    </div>
-    <div>
-      <h3>Proyecto 2</h3>
-      <p>Descripción del proyecto 2.</p>
-    </div>
-    <!-- Puedes agregar más proyectos aquí -->
+    <ul>
+      <li>Nombre del Proyecto 1</li>
+      <li>Nombre del Proyecto 2</li>
+      <li>Nombre del Proyecto 3</li>
+      <!-- Puedes agregar más proyectos aquí -->
+    </ul>
   </section>
-
+  <!-- Sección de contacto -->
   <section id="contacto">
     <h2>Contacto</h2>
-    <p>Información de contacto, como dirección de correo electrónico y enlaces a perfiles de redes sociales.</p>
+    <p>Puedes contactarme a través de los siguientes medios:</p>
+    <ul>
+      <li>Email: tu@email.com</li>
+      <li>Teléfono: +123456789</li>
+      <li>Redes sociales: enlace a tus perfiles en redes sociales</li>
+    </ul>
   </section>
-
-  <footer>
-    <p>Derechos de autor &copy; 2023 | Nombre del Portafolio</p>
-  </footer>
+  <!-- Puedes agregar más secciones según tus necesidades -->
 </body>
 </html>
 
