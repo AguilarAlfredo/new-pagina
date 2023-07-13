@@ -1,21 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mi primera página web</title>
+  <title>Mi Portafolio</title>
+  <style>
+    /* Estilos CSS para el portafolio */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    nav ul li {
+      display: inline;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+    
+    section {
+      padding: 50px;
+    }
+    
+    section h2 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    section p {
+      color: #666;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    footer p {
+      margin: 0;
+    }
+    
+    /* Reglas de CSS para la imagen de cabecera */
+    header img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hola, mundo!</h1>
-  
-  <p>Esta es mi primera página web.</p>
-  
-  <h2>Mi sección favorita</h2>
-  
-  <ul>
-    <li>Elemento 1</li>
-    <li>Elemento 2</li>
-    <li>Elemento 3</li>
-  </ul>
-  
-  <p>¡Gracias por visitar mi página!</p>
+  <header>
+    <img src="theking.png" alt="Imagen de cabecera">
+    <h1>Mi Portafolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobremi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <h2>Bienvenido a mi Portafolio</h2>
+    <p>Texto introductorio sobre ti y tu portafolio.</p>
+  </section>
+
+  <section id="sobremi">
+    <h2>Sobre mí</h2>
+    <p>Información personal y descripción de tus habilidades y experiencia.</p>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div>
+      <h3>Proyecto 1</h3>
+      <p>Descripción del proyecto 1.</p>
+    </div>
+    <div>
+      <h3>Proyecto 2</h3>
+      <p>Descripción del proyecto 2.</p>
+    </div>
+    <!-- Puedes agregar más proyectos aquí -->
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Información de contacto, como dirección de correo electrónico y enlaces a perfiles de redes sociales.</p>
+  </section>
+
+  <footer>
+    <p>Derechos de autor &copy; 2023 | Nombre del Portafolio</p>
+  </footer>
 </body>
 </html>
+
